@@ -100,7 +100,7 @@ hr {
 .hero {
     padding: 2rem;
     padding-top: 5rem;
-
+    border-radius: 10px;
 }
 
 .hero .hero-img {
@@ -108,6 +108,7 @@ hr {
     width: 350px;
     display: block;
     margin: auto;
+    border-radius: 20px;
 }
 
 .hero .hero-heading {
