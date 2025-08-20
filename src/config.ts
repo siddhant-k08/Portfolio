@@ -5,7 +5,7 @@ export const siteConfig = {
   accentColor: "#1d4ed8",
   social: {
     email: "kulkarni.sid0809@gmail.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
+    linkedin: "https://www.linkedin.com/in/siddhant-kulkarni-047a00226/",
     twitter: "https://x.com/Siddhant8903",
     github: "https://github.com/siddhant-k08",
   },
