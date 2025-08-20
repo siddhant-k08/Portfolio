@@ -23,8 +23,8 @@ export const siteConfig = {
     {
       name: "Prediction Market",
       description:
-        "",
-      link: "",
+        "A decentralized prediction market platform for real-time betting and trading on race outcomes with liquidity provision and oracle-based result verification.",
+      link: "https://prediction-markets-one.vercel.app/",
       skills: ["Solidity", "TypeScript", "Ethereum"],
     },
     {
@@ -46,7 +46,7 @@ export const siteConfig = {
       description:
         "Complete DAO ecosystem with NFT collection, marketplace, and governance. Enables on-chain voting, proposal creation, and collective NFT purchasing decisions.",
       link: "https://nft-dao-nine.vercel.app/",
-      skills: ["Solidity", "TypeScript", "Ethereum"],
+      skills: ["Solidity", "JavaScript", "Ethereum"],
     }
   ],
   experience: [
