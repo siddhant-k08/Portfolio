@@ -3,119 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Siddhant Kulkarni - Full-Stack Blockchain Developer</title>
+    <meta name="description" content="Explore my blockchain and web development projects showcasing expertise in DeFi, NFTs, and smart contracts">
+    <link rel="icon" href="images/pfp.jpg" type="image/x-icon">
     <link href="css/style.css" rel="stylesheet" />
-    <title>Projects | Siddhant Kulkarni</title>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <nav class="navigation container">
-        <div class="nav-brand">Siddhant Kulkani</div>
-        <ul class="list-non-bullet nav-pills">
-            <li class="list-item-inline">
-                <a class="link" href="index.html">Home</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link link-active" href="projects.html">Projects</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="blogs.html">Blogs</a>
-            </li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="navigation glass">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="nav-brand">Siddhant Kulkarni</div>
+                <ul class="list-non-bullet nav-pills">
+                    <li class="list-item-inline">
+                        <a class="link" href="index.html">Home</a>
+                    </li>
+                    <li class="list-item-inline">
+                        <a class="link link-active" href="projects.html">Projects</a>
+                    </li>
+                    <li class="list-item-inline">
+                        <a class="link" href="blogs.html">Blogs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="hero">
-        <h1 class="hero-heading">see my <span class="heading-inverted"> code</span></h1>
+        <div class="container">
+            <h1 class="hero-heading">My <span class="heading-inverted">Projects</span></h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                Showcasing innovative blockchain applications and web development projects that demonstrate my expertise in DeFi, NFTs, and smart contract development.
+            </p>
+        </div>
     </header>
 
-    <ul class="list-non-bullet">
+    <!-- Projects Grid -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: var(--space-xl);">
+                
+                <!-- Balloon DeX Project -->
+                <article class="glass" style="padding: var(--space-xl); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: var(--gradient-primary); opacity: 0.1; border-radius: 50%; transform: translate(30px, -30px);"></div>
+                    
+                    <h2 style="color: var(--accent-primary); margin-bottom: var(--space-sm);">Balloon DeX</h2>
+                    <small style="color: var(--text-muted); font-size: 0.9rem;">April, 2025</small>
+                    
+                    <p style="margin: var(--space-md) 0;">
+                        Trade ERC20 BALLOONS ($BAL) with ETH in a decentralized galaxy of tokens. Connect your wallet, check your assets, and swap seamlessly in a UI built for the future.
+                    </p>
+                    
+                    <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap; margin-top: var(--space-lg);">
+                        <a class="link link-primary" href="https://balloon-dex-nextjs.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            Live Project
+                        </a>
+                        <a class="link link-secondary" href="https://github.com/siddhant-k08/balloon_dex" target="_blank" rel="noopener noreferrer">
+                            View Source
+                        </a>
+                    </div>
+                </article>
 
-        <li>
-            <article class="showcase-list container container-center ">
-                <h1>Balloon DeX</h1>
-            <small>April, 2025</small>
-            <p>Trade ERC20 BALLOONS ($BAL) with ETH in a decentralized galaxy of tokens. Connect your wallet, check your assets, and swap seamlessly in a UI built for the future.</p>
+                <!-- Over-collateralized Lending Project -->
+                <article class="glass" style="padding: var(--space-xl); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: var(--gradient-secondary); opacity: 0.1; border-radius: 50%; transform: translate(30px, -30px);"></div>
+                    
+                    <h2 style="color: var(--accent-secondary); margin-bottom: var(--space-sm);">Over-collateralized Lending</h2>
+                    <small style="color: var(--text-muted); font-size: 0.9rem;">June, 2024</small>
+                    
+                    <p style="margin: var(--space-md) 0;">
+                        Advanced DeFi lending protocol with ETH deposits and CORN token loans. Features 120% collateralization, liquidation mechanisms, and 10% liquidator fees for maintaining protocol security.
+                    </p>
+                    
+                    <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap; margin-top: var(--space-lg);">
+                        <a class="link link-primary" href="https://over-collateralized-lending.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            Live Project
+                        </a>
+                        <a class="link link-secondary" href="https://github.com/siddhant-k08/over-collateralized-lending" target="_blank" rel="noopener noreferrer">
+                            View Source
+                        </a>
+                    </div>
+                </article>
 
-            <a class="link link-primary" href="https://balloon-dex-nextjs.vercel.app/" target="_blank">Live Project</a>
-            <a class="link link-secondary" href="https://github.com/siddhant-k08/balloon_dex" target="_blank">View Source</a>
+                <!-- Dice Game Project -->
+                <article class="glass" style="padding: var(--space-xl); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: var(--gradient-primary); opacity: 0.1; border-radius: 50%; transform: translate(30px, -30px);"></div>
+                    
+                    <h2 style="color: var(--accent-tertiary); margin-bottom: var(--space-sm);">Dice Game</h2>
+                    <small style="color: var(--text-muted); font-size: 0.9rem;">May, 2025</small>
+                    
+                    <p style="margin: var(--space-md) 0;">
+                        Provably fair blockchain dice game with dynamic prize pools. Players roll dice to win prizes, with 40% of entry fees going to prizes and 60% funding future rewards.
+                    </p>
+                    
+                    <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap; margin-top: var(--space-lg);">
+                        <a class="link link-primary" href="https://dice-game-chi-neon.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            Live Project
+                        </a>
+                        <a class="link link-secondary" href="https://github.com/siddhant-k08/se-2-challenges/tree/challenge-3-dice-game" target="_blank" rel="noopener noreferrer">
+                            View Source
+                        </a>
+                    </div>
+                </article>
 
-            </article>
-            
-        </li>
+                <!-- NFT DAO Project -->
+                <article class="glass" style="padding: var(--space-xl); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: var(--gradient-secondary); opacity: 0.1; border-radius: 50%; transform: translate(30px, -30px);"></div>
+                    
+                    <h2 style="color: var(--accent-success); margin-bottom: var(--space-sm);">NFT DAO</h2>
+                    <small style="color: var(--text-muted); font-size: 0.9rem;">May, 2024</small>
+                    
+                    <p style="margin: var(--space-md) 0;">
+                        Complete DAO ecosystem with NFT collection, marketplace, and governance. Enables on-chain voting, proposal creation, and collective NFT purchasing decisions.
+                    </p>
+                    
+                    <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap; margin-top: var(--space-lg);">
+                        <a class="link link-primary" href="https://nft-dao-nine.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            Live Project
+                        </a>
+                        <a class="link link-secondary" href="https://github.com/siddhant-k08/onchain-dao" target="_blank" rel="noopener noreferrer">
+                            View Source
+                        </a>
+                    </div>
+                </article>
 
-        <li>
-            <article class="showcase-list container container-center ">
-                <h1>Over-collateralized Lending</h1>
-            <small>June, 2024</small>
-            <p>The Lending contract accepts ETH deposits and allows depositor's to take out a loan in CORN 🌽. The contract tracks each depositor's address and only allows them to borrow as long as they maintain at least 120% of the loans value in ETH. If the collateral falls in value or if CORN goes up in value then the borrower's position may be liquidatable by anyone who pays back the loan. The liquidator has an incentive to do this because they collect a 10% fee on top of the value of the loan.</p>
+                <!-- Token Vendor Project -->
+                <article class="glass" style="padding: var(--space-xl); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: var(--gradient-primary); opacity: 0.1; border-radius: 50%; transform: translate(30px, -30px);"></div>
+                    
+                    <h2 style="color: var(--accent-warning); margin-bottom: var(--space-sm);">Token Vendor</h2>
+                    <small style="color: var(--text-muted); font-size: 0.9rem;">May, 2024</small>
+                    
+                    <p style="margin: var(--space-md) 0;">
+                        ERC20 token marketplace allowing users to purchase, transfer, and sell tokens back to the vendor. Demonstrates token economics and smart contract interactions.
+                    </p>
+                    
+                    <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap; margin-top: var(--space-lg);">
+                        <a class="link link-primary" href="https://token-vendor-amber.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            Live Project
+                        </a>
+                        <a class="link link-secondary" href="https://github.com/siddhant-k08/se-2-challenges/tree/challenge-2-token-vendor" target="_blank" rel="noopener noreferrer">
+                            View Source
+                        </a>
+                    </div>
+                </article>
 
-            <a class="link link-primary" href="https://over-collateralized-lending.vercel.app/" target="_blank">Live Project</a>
-            <a class="link link-secondary" href="https://github.com/siddhant-k08/over-collateralized-lending" target="_blank">View Source</a>
+            </div>
+        </div>
+    </section>
 
-            </article>
-            
-        </li>
-
-        <li>
-            <article class="showcase-list container container-center ">
-                <h1>Dice Game</h1>
-            <small>May, 2025</small>
-            <p>Dice Game is a contract that allows users to roll the dice to try and win the prize. If players roll either a 0, 1, 2, 3, 4 or 5 they will win the current prize amount. The initial prize is 10% of the contract's balance, which starts out at .05 Eth.
-            <br><br>🧤 Every time a player rolls the dice, they are required to send .002 Eth. 40 percent of this value is added to the current prize amount while the other 60 percent stays in the contract to fund future prizes. Once a prize is won, the new prize amount is set to 10% of the total balance of the DiceGame contract.</p>
-
-            <a class="link link-primary" href="https://dice-game-chi-neon.vercel.app/" target="_blank">Live Project</a>
-            <a class="link link-secondary" href="https://github.com/siddhant-k08/se-2-challenges/tree/challenge-3-dice-game" target="_blank">View Source</a>
-
-            </article>
-            
-        </li>
-
-        <li>
-            <article class="showcase-list container container-center ">
-                <h1>NFT DAO</h1>
-            <small>May, 2024</small>
-            <p>The CryptoDevs DAO project is a decentralized application (dApp) that integrates a basic NFT collection, an on-chain NFT marketplace, a custom DAO smart contract, and a user-friendly Next.js website. The project aims to demonstrate the functionality of a decentralized autonomous organization (DAO) capable of proposing, voting on, and executing NFT purchases on-chain.</p>
-
-            <a class="link link-primary" href="https://nft-dao-nine.vercel.app/" target="_blank">Live Project</a>
-            <a class="link link-secondary" href="https://github.com/siddhant-k08/onchain-dao" target="_blank">View Source</a>
-
-            </article>
-            
-        </li>
-
-        <li>
-            <article class="showcase-list container container-center ">
-                <h1>Token Vendor</h1>
-            <small>May, 2024</small>
-            <p>An app that lets users purchase your ERC20 token, transfer it, and sell it back to the vendor.</p>
-
-            <a class="link link-primary" href="https://token-vendor-amber.vercel.app/" target="_blank">Live Project</a>
-            <a class="link link-secondary" href="https://github.com/siddhant-k08/se-2-challenges/tree/challenge-2-token-vendor" target="_blank">View Source</a>
-
-            </article>
-            
-        </li>
-
-    </ul>
-
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-header">Social Media Presence</div>
-        <ul class="social-links list-non-bullet">
-            <li class="list-item-inline">
-                <a class="link" href="https://github.com/siddhant-k08" target="_blank">
-                    GITHUB
-                </a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="https://twitter.com/Siddhant8903" target="_blank">
-                    TWITTER
-                </a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="https://www.linkedin.com/in/siddhant-kulkarni-047a00226" target="_blank">
-                    LINKEDIN
-                </a>
-            </li>
-            
-        </ul>
+        <div class="container">
+            <div class="footer-header">Connect With Me</div>
+            <ul class="social-links list-non-bullet">
+                <li class="list-item-inline">
+                    <a class="link" href="https://github.com/siddhant-k08" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                </li>
+                <li class="list-item-inline">
+                    <a class="link" href="https://twitter.com/Siddhant8903" target="_blank" rel="noopener noreferrer">
+                        Twitter
+                    </a>
+                </li>
+                <li class="list-item-inline">
+                    <a class="link" href="https://www.linkedin.com/in/siddhant-kulkarni-047a00226" target="_blank" rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
     </footer>
     
 </body>

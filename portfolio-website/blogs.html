@@ -3,97 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs | Siddhant Kulkarni - Full-Stack Blockchain Developer</title>
+    <meta name="description" content="Technical insights and tutorials on blockchain development, DeFi, and modern web technologies">
+    <link rel="icon" href="images/pfp.jpg" type="image/x-icon">
     <link href="css/style.css" rel="stylesheet" />
-    <title>Blogs | Siddhant Kulkarni</title>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <nav class="navigation container">
-        <div class="nav-brand">Siddhant Kulkarni</div>
-        <ul class="list-non-bullet nav-pills">
-            <li class="list-item-inline">
-                <a class="link" href="index.html">Home</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link " href="projects.html">Projects</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link link-active" href="blogs.html">Blogs</a>
-            </li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="navigation glass">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="nav-brand">Siddhant Kulkarni</div>
+                <ul class="list-non-bullet nav-pills">
+                    <li class="list-item-inline">
+                        <a class="link" href="index.html">Home</a>
+                    </li>
+                    <li class="list-item-inline">
+                        <a class="link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="list-item-inline">
+                        <a class="link link-active" href="blogs.html">Blogs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="hero">
-        <h1 class="hero-heading">read my <span class="heading-inverted">blogs</span></h1>
+        <div class="container">
+            <h1 class="hero-heading">Technical <span class="heading-inverted">Insights</span></h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                Exploring the latest in blockchain technology, DeFi protocols, and modern web development through detailed tutorials and insights.
+            </p>
+        </div>
     </header>
 
-    <ul class="list-non-bullet">
+    <!-- Blogs Grid -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: var(--space-xl);">
+                
+                <!-- Blog 1 -->
+                <article class="glass" style="padding: var(--space-xl); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: var(--gradient-primary); opacity: 0.1; border-radius: 50%; transform: translate(30px, -30px);"></div>
+                    
+                    <h2 style="color: var(--accent-primary); margin-bottom: var(--space-sm); font-size: 1.3rem;">
+                        Bootstrap a Full Stack Modern dapp using the Scaffold-ETH CLI and Subgraph Extension
+                    </h2>
+                    <small style="color: var(--text-muted); font-size: 0.9rem;">July, 2024</small>
+                    
+                    <p style="margin: var(--space-md) 0; line-height: 1.6;">
+                        A comprehensive step-by-step guide to developing dapps using create-eth subgraph extension. Learn how Scaffold-ETH, an open-source, up-to-date toolkit, can accelerate your blockchain development workflow.
+                    </p>
+                    
+                    <div style="margin-top: var(--space-lg);">
+                        <a class="link link-primary" href="https://siddhantk08.hashnode.dev/bootstrap-a-full-stack-modern-dapp-using-the-scaffold-eth-cli-and-subgraph-extension" target="_blank" rel="noopener noreferrer">
+                            Read Full Article
+                        </a>
+                    </div>
+                </article>
 
-        <li>
-            <article class="showcase-list container container-center ">
-                <h1>Bootstrap a Full Stack Modern dapp using the Scaffold-ETH CLI and Subgraph Extension</h1>
-            <small>July, 2024</small>
-            <p>A Step-by-Step Guide to developing dapps using create-eth subgraph extension · What is Scaffold-ETH 🏗? Scaffold-ETH is an open-source, up-to-date...</p>
+                <!-- Blog 2 -->
+                <article class="glass" style="padding: var(--space-xl); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: var(--gradient-secondary); opacity: 0.1; border-radius: 50%; transform: translate(30px, -30px);"></div>
+                    
+                    <h2 style="color: var(--accent-secondary); margin-bottom: var(--space-sm); font-size: 1.3rem;">
+                        Upgrading a Subgraph to The Graph Network
+                    </h2>
+                    <small style="color: var(--text-muted); font-size: 0.9rem;">April, 2024</small>
+                    
+                    <p style="margin: var(--space-md) 0; line-height: 1.6;">
+                        A detailed step-by-step guide to upgrading subgraphs on the hosted service to The Graph Network. Essential knowledge for developers ahead of the Sunbeam Phase of The Sunrise of Decentralized Data.
+                    </p>
+                    
+                    <div style="margin-top: var(--space-lg);">
+                        <a class="link link-primary" href="https://siddhantk08.hashnode.dev/upgrading-a-subgraph-to-the-graph-network" target="_blank" rel="noopener noreferrer">
+                            Read Full Article
+                        </a>
+                    </div>
+                </article>
 
-            <a class="link link-primary" href="https://siddhantk08.hashnode.dev/bootstrap-a-full-stack-modern-dapp-using-the-scaffold-eth-cli-and-subgraph-extension">Read More</a>
-            </article>
-            
-        </li>
+                <!-- Blog 3 -->
+                <article class="glass" style="padding: var(--space-xl); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: var(--gradient-primary); opacity: 0.1; border-radius: 50%; transform: translate(30px, -30px);"></div>
+                    
+                    <h2 style="color: var(--accent-tertiary); margin-bottom: var(--space-sm); font-size: 1.3rem;">
+                        Building a dApp using Scaffold-ETH 2 and The Graph
+                    </h2>
+                    <small style="color: var(--text-muted); font-size: 0.9rem;">February, 2024</small>
+                    
+                    <p style="margin: var(--space-md) 0; line-height: 1.6;">
+                        A comprehensive tutorial on building dApps using Scaffold-ETH 2 and The Graph. Learn how to create modern decentralized applications with powerful indexing capabilities.
+                    </p>
+                    
+                    <div style="margin-top: var(--space-lg);">
+                        <a class="link link-primary" href="https://siddhantk08.hashnode.dev/building-a-dapp-using-scaffold-eth-2-and-the-graph" target="_blank" rel="noopener noreferrer">
+                            Read Full Article
+                        </a>
+                    </div>
+                </article>
 
-        <li>
-            <article class="showcase-list container container-center ">
-                <h1>Upgrading a Subgraph to The Graph Network</h1>
-                <small>April, 2024</small>
-                <p>A Step-by-Step Guide to Upgrading Subgraphs on the Hosted Service to The Graph Network. · Ahead of the Sunbeam Phase of The Sunrise of Decentralized...</p>
-    
-                <a class="link link-primary" href="https://siddhantk08.hashnode.dev/upgrading-a-subgraph-to-the-graph-network">Read More</a>
-                 </article>
-            
-        </li>
+                <!-- Blog 4 -->
+                <article class="glass" style="padding: var(--space-xl); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: var(--gradient-secondary); opacity: 0.1; border-radius: 50%; transform: translate(30px, -30px);"></div>
+                    
+                    <h2 style="color: var(--accent-success); margin-bottom: var(--space-sm); font-size: 1.3rem;">
+                        Unlocking Blast L2 data with The Graph
+                    </h2>
+                    <small style="color: var(--text-muted); font-size: 0.9rem;">January, 2024</small>
+                    
+                    <p style="margin: var(--space-md) 0; line-height: 1.6;">
+                        A step-by-step guide to deploying subgraphs on the Blast testnet. Discover how indexing blockchain data with The Graph has revolutionized the way we access and query blockchain information.
+                    </p>
+                    
+                    <div style="margin-top: var(--space-lg);">
+                        <a class="link link-primary" href="https://siddhantk08.hashnode.dev/building-a-dapp-using-scaffold-eth-2-and-the-graph" target="_blank" rel="noopener noreferrer">
+                            Read Full Article
+                        </a>
+                    </div>
+                </article>
 
-        <li>
-            <article class="showcase-list container container-center ">
-                <h1>Building a dApp using Scaffold-ETH 2 and The Graph</h1>
-                <small>February, 2024</small>
-                <p>A Step-by-Step Guide to Build dApps using Scaffold-ETH 2 and The Graph · gm gm gm! How's everyone doing? Welcome to my tutorial on How To Build dApps...</p>
-    
-                <a class="link link-primary" href="https://siddhantk08.hashnode.dev/building-a-dapp-using-scaffold-eth-2-and-the-graph">Read More</a>
-                 </article>
-            
-        </li>
+            </div>
+        </div>
+    </section>
 
-        <li>
-            <article class="showcase-list container container-center ">
-                <h1>Unlocking Blast L2 data with The Graph</h1>
-                <small>January, 2024</small>
-                <p>A step-by-step guide to Deploying Subgraphs on the Blast Testnet. · Gm everyone!!! Indexing blockchain data with The Graph has been a game changer in the...</p>
-    
-                <a class="link link-primary" href="https://siddhantk08.hashnode.dev/building-a-dapp-using-scaffold-eth-2-and-the-graph">Read More</a>
-                 </article>
-            
-        </li>
-
-    </ul>
-
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-header">social media presence</div>
-        <ul class="social-links list-non-bullet">
-            <li class="list-item-inline">
-                <a class="link" href="https://github.com/yash251" target="_blank">
-                    GITHUB
-                </a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="https://twitter.com/0x_yasshhh_" target="_blank">
-                    TWITTER
-                </a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="https://www.linkedin.com/in/yash-jagtap-46384610a/" target="_blank">
-                    LINKEDIN
-                </a>
-            </li>
-            
-        </ul>
+        <div class="container">
+            <div class="footer-header">Connect With Me</div>
+            <ul class="social-links list-non-bullet">
+                <li class="list-item-inline">
+                    <a class="link" href="https://github.com/siddhant-k08" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                </li>
+                <li class="list-item-inline">
+                    <a class="link" href="https://twitter.com/Siddhant8903" target="_blank" rel="noopener noreferrer">
+                        Twitter
+                    </a>
+                </li>
+                <li class="list-item-inline">
+                    <a class="link" href="https://www.linkedin.com/in/siddhant-kulkarni-047a00226/" target="_blank" rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
     </footer>
     
 </body>
