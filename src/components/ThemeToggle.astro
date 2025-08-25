@@ -1,0 +1,133 @@
+---
+// ThemeToggle component
+---
+
+<button
+  id="theme-toggle"
+  class="theme-toggle"
+  aria-label="Toggle theme"
+  title="Toggle theme"
+>
+  <!-- Sun icon for light theme -->
+  <svg
+    id="sun-icon"
+    class="sun-icon"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+    ></path>
+  </svg>
+  
+  <!-- Moon icon for dark theme -->
+  <svg
+    id="moon-icon"
+    class="moon-icon"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    style="display: none;"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+    ></path>
+  </svg>
+</button>
+
+<script>
+  class ThemeManager {
+    constructor() {
+      this.themeToggle = document.getElementById('theme-toggle');
+      this.sunIcon = document.getElementById('sun-icon');
+      this.moonIcon = document.getElementById('moon-icon');
+      this.html = document.documentElement;
+      
+      this.currentTheme = this.getStoredTheme() || 'light';
+      this.init();
+    }
+    
+    init() {
+      // Set initial theme
+      this.setTheme(this.currentTheme);
+      
+      // Add event listener
+      this.themeToggle?.addEventListener('click', () => {
+        this.toggleTheme();
+      });
+      
+      // Listen for system theme changes
+      this.watchSystemTheme();
+    }
+    
+    getStoredTheme() {
+      if (typeof window !== 'undefined') {
+        return localStorage.getItem('theme');
+      }
+      return null;
+    }
+    
+    setStoredTheme(theme) {
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('theme', theme);
+      }
+    }
+    
+    setTheme(theme) {
+      this.currentTheme = theme;
+      this.html.setAttribute('data-theme', theme);
+      this.setStoredTheme(theme);
+      this.updateIcon(theme);
+    }
+    
+    toggleTheme() {
+      const newTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+      this.setTheme(newTheme);
+      
+      // Add rotation animation
+      this.themeToggle?.classList.add('animate-rotate');
+      setTimeout(() => {
+        this.themeToggle?.classList.remove('animate-rotate');
+      }, 500);
+    }
+    
+    updateIcon(theme) {
+      if (theme === 'dark') {
+        this.sunIcon.style.display = 'none';
+        this.moonIcon.style.display = 'block';
+      } else {
+        this.sunIcon.style.display = 'block';
+        this.moonIcon.style.display = 'none';
+      }
+    }
+    
+    watchSystemTheme() {
+      if (typeof window !== 'undefined' && window.matchMedia) {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        mediaQuery.addEventListener('change', (e) => {
+          // Only auto-switch if user hasn't manually set a preference
+          if (!this.getStoredTheme()) {
+            this.setTheme(e.matches ? 'dark' : 'light');
+          }
+        });
+      }
+    }
+  }
+  
+  // Initialize theme manager when DOM is loaded
+  if (typeof document !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', () => {
+      new ThemeManager();
+    });
+  }
+</script> 

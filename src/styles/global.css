@@ -1,5 +1,288 @@
 @import "tailwindcss";
 
+/* Theme variables */
+:root {
+  /* Light theme (current theme - unchanged) */
+  --bg-primary-light: #ffffff;
+  --bg-secondary-light: #f8fafc;
+  --text-primary-light: #1e293b;
+  --text-secondary-light: #64748b;
+  --accent-color-light: #1d4ed8;
+  --accent-color-bright-light: #3b82f6;
+  --grid-color-light: rgba(29, 78, 216, 0.1);
+  --border-light: #e2e8f0;
+  --card-bg-light: #ffffff;
+  --card-border-light: #e2e8f0;
+  
+  /* Dark theme - using provided Dark Reader color scheme */
+  --bg-primary-dark: #181a1b;
+  --bg-secondary-dark: #1e2021;
+  --text-primary-dark: #e8e6e3;
+  --text-secondary-dark: #b2aba1;
+  --accent-color-dark: #5096e8;
+  --accent-color-bright-dark: #3391ff;
+  --grid-color-dark: rgba(80, 150, 232, 0.1);
+  --border-dark: #776e62;
+  --card-bg-dark: #1e2022;
+  --card-border-dark: #333739;
+  
+  /* Default to light theme */
+  --bg-primary: var(--bg-primary-light);
+  --bg-secondary: var(--bg-secondary-light);
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --accent-color: var(--accent-color-light);
+  --accent-color-bright: var(--accent-color-bright-light);
+  --grid-color: var(--grid-color-light);
+  --border: var(--border-light);
+  --card-bg: var(--card-bg-light);
+  --card-border: var(--card-border-light);
+}
+
+/* Dark theme class */
+[data-theme="dark"] {
+  --bg-primary: var(--bg-primary-dark);
+  --bg-secondary: var(--bg-secondary-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --accent-color: var(--accent-color-dark);
+  --accent-color-bright: var(--accent-color-bright-dark);
+  --grid-color: var(--grid-color-dark);
+  --border: var(--border-dark);
+  --card-bg: var(--card-bg-dark);
+  --card-border: var(--card-border-dark);
+}
+
 body {
   font-family: 'IBM Plex Mono', monospace;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color-bright);
+}
+
+/* Grid pattern background */
+.grid-pattern {
+  background-image: 
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 50px 50px;
+  position: relative;
+  transition: background-image 0.3s ease;
+}
+
+.grid-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, var(--grid-color) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, var(--grid-color) 2px, transparent 2px);
+  background-size: 100px 100px;
+  pointer-events: none;
+  transition: background-image 0.3s ease;
+}
+
+/* Programming symbols overlay */
+.programming-symbols {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  pointer-events: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  color: var(--accent-color);
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.programming-symbols::before {
+  content: '</> => [] {} :: ** == ++ ;';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: rotate(-15deg);
+}
+
+.programming-symbols::after {
+  content: '{} => [] :: ** == ++ ; </>';
+  position: absolute;
+  top: 60%;
+  right: 15%;
+  transform: rotate(10deg);
+}
+
+/* Hero gradient overlay - theme specific */
+#hero .absolute.inset-0.-z-10 {
+  background: radial-gradient(ellipse 800px 1200px at 0% 0%, var(--accent-color)20 0%, var(--accent-color)10 20%, var(--accent-color)05 40%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.8) 90%, white 100%);
+  transition: background 0.3s ease;
+}
+
+[data-theme="dark"] #hero .absolute.inset-0.-z-10 {
+  background: radial-gradient(ellipse 800px 1200px at 0% 0%, var(--accent-color)20 0%, var(--accent-color)10 20%, var(--accent-color)05 40%, rgba(15, 23, 42, 0.3) 70%, rgba(15, 23, 42, 0.8) 90%, rgba(15, 23, 42, 1) 100%);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
+  border-radius: 50px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle .sun-icon {
+  color: #f59e0b;
+}
+
+.theme-toggle .moon-icon {
+  color: #6366f1;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-rotate {
+  animation: rotate 0.5s ease-in-out;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Hover effects */
+.hover-glow:hover {
+  text-shadow: 0 0 10px var(--accent-color);
+  transition: text-shadow 0.3s ease;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .glass {
+  background: rgba(30, 32, 33, 0.8);
+  border: 1px solid rgba(80, 150, 232, 0.2);
+}
+
+/* Theme transition classes */
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Responsive theme toggle */
+@media (max-width: 768px) {
+  .theme-toggle {
+    top: 15px;
+    right: 15px;
+    padding: 6px;
+  }
+  
+  .theme-toggle svg {
+    width: 18px;
+    height: 18px;
+  }
 }
