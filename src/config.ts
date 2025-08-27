@@ -14,6 +14,13 @@ export const siteConfig = {
   skills: ["Ethereum", "Solana", "HTML", "CSS", "JavaScript", "TypeScript", "Solidity", "C", "C++", "Python",  "React", "Next", "Node.js", "GraphQL", "Ethers.js", "Web3.js", "The Graph", "Scaffold-ETH-2", "IPFS"],
   projects: [
     {
+      name: "MyUSD-Stablecoin",
+      description:
+        "A decentralized stablecoin backed by ETH collateral, designed to maintain a stable $1 USD peg",
+      link: "https://stablecoins-temp-nextjs.vercel.app/",
+      skills: ["Solidity", "TypeScript", "Ethereum"],
+    },
+    {
       name: "Over-collateralized Lending Protocol",
       description:
         "Advanced DeFi lending protocol with ETH deposits and CORN token loans. Features 120% collateralization, liquidation mechanisms, and 10% liquidator fees for maintaining protocol security.",
