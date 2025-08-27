@@ -1,0 +1,60 @@
+---
+import { siteConfig } from "../config";
+const hasCertifications = siteConfig.certifications && siteConfig.certifications.length > 0;
+---
+
+{
+  hasCertifications && (
+    <section id="certifications" class="p-8 sm:p-12 md:p-16 lg:p-24 bg-[var(--bg-primary)] theme-transition">
+      <div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl xl:text-6xl font-bold text-[var(--text-primary)]">
+              Certifications
+            </h2>
+            <div
+              class="w-[75px] h-[5px] mt-2 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
+          </div>
+
+          <div class="lg:col-span-8">
+            <div class="space-y-8">
+              {siteConfig.certifications.map((cert) => (
+                <div class="bg-[var(--card-bg)] rounded-lg shadow-sm border border-[var(--card-border)] p-4 sm:p-5 md:p-6 hover:shadow-md hover:border-[var(--accent-color)] transition-all duration-300">
+                  <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
+                    <div>
+                      <h3 class="text-base sm:text-lg font-semibold text-[var(--text-primary)]">
+                        {cert.name}
+                      </h3>
+                      <p
+                        class="text-sm sm:text-base text-[var(--accent-color)]"
+                        style={`color: ${siteConfig.accentColor}`}
+                      >
+                        {cert.issuer}
+                      </p>
+                    </div>
+                    <span class="text-xs text-[var(--text-secondary)] mt-2 sm:mt-0">
+                      {cert.dateRange}
+                    </span>
+                  </div>
+
+                  <ul class="space-y-2">
+                    {cert.achievements.map((achievement) => (
+                      <li class="flex items-start">
+                        <span class="inline-block w-1.5 h-1.5 rounded-full bg-[var(--text-secondary)] mt-2 mr-3 flex-shrink-0" />
+                        <span class="text-xs sm:text-sm text-[var(--text-secondary)]">
+                          {achievement}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+} 

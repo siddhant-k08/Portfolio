@@ -94,4 +94,26 @@ export const siteConfig = {
       ],
     },
   ],
+  certifications: [
+    {
+      name: "Ethereum Developer Degree",
+      issuer: "LearnWeb3",
+      dateRange: "2024",
+      achievements: [
+        "Completed comprehensive Ethereum development training",
+        "Proficient in Solidity smart contract development",
+        "Understanding of DeFi protocols and DApp architecture"
+      ],
+    },
+    {
+      name: "Full Stack Developer Path",
+      issuer: "Scrimba",
+      dateRange: "2025",
+      achievements: [
+        "Completed the full stack developer path on Scrimba",
+        "Learned the basics of HTML, CSS, JavaScript, React, Node.js, and MongoDB",
+        "Built a few projects like a weather app, a portfolio website, and a blog website"
+      ],
+    },
+  ],
 };
