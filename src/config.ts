@@ -115,5 +115,14 @@ export const siteConfig = {
         "Built a few projects like a weather app, a portfolio website, and a blog website"
       ],
     },
+    {
+      name: "RPA Basics and Introduction to UiPath",
+      issuer: "Uipath",
+      dateRange: "2022",
+      achievements: [
+        "Completed the RPA basics and introduction to UiPath course",
+        "Learned the basics of RPA and UiPath",
+      ],
+    },
   ],
 };
