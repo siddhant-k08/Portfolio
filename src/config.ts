@@ -124,5 +124,14 @@ export const siteConfig = {
         "Learned the basics of RPA and UiPath",
       ],
     },
+    {
+      name: "Programming for Everybody (Getting Started with Python)",
+      issuer: "University of Michigan",
+      dateRange: "2023",
+      achievements: [
+        "Completed the Programming for Everybody (Getting Started with Python) course",
+        "Learned the basics of Python",
+      ]
+    },
   ],
 };
