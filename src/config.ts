@@ -10,7 +10,7 @@ export const siteConfig = {
     github: "https://github.com/siddhant-k08",
   },
   aboutMe:
-    "I am a fullstack blockchain developer with a passion for building scalable and efficient blockchain applications. I am currently pursuing my M.Sc. in Blockchain Technology and I am looking for work in the blockchain space. I am also a part of BuidlGuidl where I contribute to The Graph <> BuidlGuidl Cohort",
+    "I am a fullstack blockchain developer with a passion for building scalable and efficient applications. I am currently pursuing my M.Sc. in Blockchain Technology and I am looking for work in the blockchain space. I am also a part of BuidlGuidl where I contribute to The Graph <> BuidlGuidl Cohort",
   skills: ["Ethereum", "Solana", "HTML", "CSS", "JavaScript", "TypeScript", "Solidity", "C", "C++", "Python",  "React", "Next", "Node.js", "GraphQL", "Ethers.js", "Web3.js", "The Graph", "Scaffold-ETH-2", "IPFS"],
   projects: [
     {
