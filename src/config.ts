@@ -133,5 +133,14 @@ export const siteConfig = {
         "Learned the basics of Python",
       ]
     },
+    {
+      name: "Foundry Deployer 101: Genesis Certification",
+      issuer: "Catapulta",
+      dateRange: "2025",
+      achievements: [
+        "Completed the Foundry Deployer 101 certification",
+        "Learned the basics of Foundry deployment",
+      ]
+    },
   ],
 };
